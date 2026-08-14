@@ -119,10 +119,10 @@ def main():
 
     def answer_and_print(question):
         result = ask_question(vector_store, llm, question)
-        print("\n📄 Sources:")
+        print("\n Sources:")
         for i, source in enumerate(result["sources"], 1):
             print(f"  {i}. {source}")
-        print(f"\n💬 Answer: {result['answer']}\n")
+        print(f"\n Answer: {result['answer']}\n")
 
     if args.query:
         answer_and_print(args.query)
